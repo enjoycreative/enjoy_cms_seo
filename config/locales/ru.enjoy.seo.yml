@@ -1,0 +1,29 @@
+ru:
+  enjoy:
+    seo:
+      seo: SEO
+      sitemap_data: Карта сайта
+
+
+  mongoid: &mongoid
+    models:
+      enjoy/seo/seo: SEO
+      enjoy/seo/sitemap_data: Карта сайта
+  activerecord:
+    <<: *mongoid
+
+    attributes:
+      enjoy/seo/seo:
+        seoable: Родительский элемент/страница
+        title: Title
+        description: SEO Description
+        keywords: SEO Keywords
+        og_title: Og title
+        og_image: Og image
+        robots: Robots
+      enjoy/seo/sitemap_data:
+        sitemap_data_field: Родительский элемент/страница
+        sitemap_show: Отображать в карте сайта
+        sitemap_lastmod: lastmod
+        sitemap_changefreq: changefreq
+        sitemap_priority: priority
