@@ -7,9 +7,9 @@ module Enjoy::Seo
     source_root File.expand_path('../templates', __FILE__)
 
     desc 'Enjoy SEO migration generator'
-    def install
+    def migration
       if Enjoy.active_record?
-        %w(pages).each do |table_name|
+        %w(seos).each do |table_name|
           migration_template "migration_#{table_name}.rb", "db/migrate/enjoy_create_#{table_name}.rb"
         end
       end
