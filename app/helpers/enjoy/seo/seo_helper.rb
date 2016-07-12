@@ -8,8 +8,8 @@ module Enjoy::Seo::SeoHelper
   end
   def render_enjoy_counters(opts = {})
     ret = []
-    ym_counter_id = opts[:ym_counter_id] || Settings.ym_counter_id
-    ga_counter_id = opts[:ga_counter_id] || Settings.ga_counter_id
+    ym_counter_id = opts[:ym_counter_id] || Settings.ym_counter_id(default: '', kind: :string, title: 'Yandex Метрика ID').strip
+    ga_counter_id = opts[:ga_counter_id] || Settings.ga_counter_id(default: '', kind: :string, title: 'Google Analitics ID').strip
     ret << enjoy_ym_counter_tag(ym_counter_id) unless ym_counter_id.blank?
     ret << enjoy_ga_counter_tag(ga_counter_id) unless ga_counter_id.blank?
     ret.join
