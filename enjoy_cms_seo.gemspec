@@ -30,12 +30,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
 
-  spec.add_dependency 'enjoy_cms', "~> 0.4.0.beta1"
+  spec.add_dependency 'enjoy_cms', "~> 0.4.0"
 
   spec.add_dependency "sitemap_generator"
   spec.add_dependency "rails_admin_sitemap"
-
-  spec.add_dependency "image_optim"
-  spec.add_dependency "paperclip-optimizer"
-
 end
