@@ -26,9 +26,7 @@ module Enjoy::Seo
           end
 
           if Enjoy::Seo.config.gallery_support
-            field :og_image, :jcrop do
-              jcrop_options :og_image_jcrop_options
-            end
+            field :og_image, :enjoy_image
           end
 
           Enjoy::RailsAdminGroupPatch::enjoy_cms_group(self, fields)
