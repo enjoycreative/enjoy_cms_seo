@@ -12,6 +12,6 @@ module Enjoy::Seo::SeoHelper
     ga_counter_id = opts[:ga_counter_id] || Settings.ga_counter_id(default: '', kind: :string, title: 'Google Analitics ID').strip
     ret << enjoy_ym_counter_tag(ym_counter_id) unless ym_counter_id.blank?
     ret << enjoy_ga_counter_tag(ga_counter_id) unless ga_counter_id.blank?
-    ret.join
+    ret.join.html_safe
   end
 end
