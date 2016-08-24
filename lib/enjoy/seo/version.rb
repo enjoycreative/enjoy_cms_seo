@@ -1,5 +1,5 @@
 module Enjoy
   module Seo
-    VERSION = "0.4.0.3"
+    VERSION = "0.4.1"
   end
 end
